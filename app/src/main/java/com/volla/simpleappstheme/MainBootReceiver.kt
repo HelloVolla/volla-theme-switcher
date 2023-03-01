@@ -25,7 +25,7 @@ class MainBootReceiver : BroadcastReceiver() {
             }
 
             Log.d(LOG_TAG, "Shared colors activated")
-            val newSharedTheme = SharedTheme(Color.WHITE, Color.BLACK, Color.BLACK, context.baseConfig.appIconColor, Color.BLACK, 0, Color.WHITE)
+            val newSharedTheme = SharedTheme(Color.WHITE, Color.BLACK, Color.BLACK, context.baseConfig.appIconColor, 0, Color.WHITE)
             try {
                 val contentValues = MyContentProvider.fillThemeContentValues(newSharedTheme)
                 context.contentResolver.update(MyContentProvider.MY_CONTENT_URI, contentValues, null, null)

@@ -27,7 +27,7 @@ class ColorChangeReceiver : BroadcastReceiver() {
         val primaryColor = intent.getIntExtra("com.volla.simpleappstheme.param.PRIMARY_COLOR", Color.BLACK)
         val accentColor = intent.getIntExtra("com.volla.simpleappstheme.param.ACCENT_COLOR", Color.WHITE)
         val navigationBarColor = intent.getIntExtra("com.volla.simpleappstheme.param.NAVIGATION_BAR_COLOR", Color.BLACK)
-        val newSharedTheme = SharedTheme(textColor, backgroundColor, primaryColor, context.baseConfig.appIconColor, navigationBarColor, 0, accentColor)
+        val newSharedTheme = SharedTheme(textColor, backgroundColor, primaryColor, context.baseConfig.appIconColor, 0, accentColor)
 
         try {
             val contentValues = MyContentProvider.fillThemeContentValues(newSharedTheme)
